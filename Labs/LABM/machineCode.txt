@@ -1,0 +1,37 @@
+0x0000000000000028 add     x30 x0 x0             add    t5, x0, x0           # index
+0x000000000000002c add     x8 x0 x0              add    s0, x0, x0           # sum
+0x0000000000000030 add     x10 x0 x0             add    a0, x0, x0           # or reduction
+0x0000000000000034 lw      x5 x30 0x000          lw     t0, 0(t5)            # loop: t0 = array[t5]
+0x0000000000000038 beq     x5 x0 0x00a           beq    t0, x0, DONE         # if (t0 == 0) done
+0x000000000000003c add     x8 x8 x5              add    s0, s0, t0           
+0x0000000000000040 or      x10 x10 x5            or     a0, a0, t0           
+0x0000000000000044 addi    x30 x30 0x004         addi   t5, t5, 4            # t5++
+0x0000000000000048 jal     x0 0xffff6            jal    x0, LOOP             
+0x0000000000000034 lw      x5 x30 0x000          lw     t0, 0(t5)            # loop: t0 = array[t5]
+0x0000000000000038 beq     x5 x0 0x00a           beq    t0, x0, DONE         # if (t0 == 0) done
+0x000000000000003c add     x8 x8 x5              add    s0, s0, t0           
+0x0000000000000040 or      x10 x10 x5            or     a0, a0, t0           
+0x0000000000000044 addi    x30 x30 0x004         addi   t5, t5, 4            # t5++
+0x0000000000000048 jal     x0 0xffff6            jal    x0, LOOP             
+0x0000000000000034 lw      x5 x30 0x000          lw     t0, 0(t5)            # loop: t0 = array[t5]
+0x0000000000000038 beq     x5 x0 0x00a           beq    t0, x0, DONE         # if (t0 == 0) done
+0x000000000000003c add     x8 x8 x5              add    s0, s0, t0           
+0x0000000000000040 or      x10 x10 x5            or     a0, a0, t0           
+0x0000000000000044 addi    x30 x30 0x004         addi   t5, t5, 4            # t5++
+0x0000000000000048 jal     x0 0xffff6            jal    x0, LOOP             
+0x0000000000000034 lw      x5 x30 0x000          lw     t0, 0(t5)            # loop: t0 = array[t5]
+0x0000000000000038 beq     x5 x0 0x00a           beq    t0, x0, DONE         # if (t0 == 0) done
+0x000000000000003c add     x8 x8 x5              add    s0, s0, t0           
+0x0000000000000040 or      x10 x10 x5            or     a0, a0, t0           
+0x0000000000000044 addi    x30 x30 0x004         addi   t5, t5, 4            # t5++
+0x0000000000000048 jal     x0 0xffff6            jal    x0, LOOP             
+0x0000000000000034 lw      x5 x30 0x000          lw     t0, 0(t5)            # loop: t0 = array[t5]
+0x0000000000000038 beq     x5 x0 0x00a           beq    t0, x0, DONE         # if (t0 == 0) done
+0x000000000000003c add     x8 x8 x5              add    s0, s0, t0           
+0x0000000000000040 or      x10 x10 x5            or     a0, a0, t0           
+0x0000000000000044 addi    x30 x30 0x004         addi   t5, t5, 4            # t5++
+0x0000000000000048 jal     x0 0xffff6            jal    x0, LOOP             
+0x0000000000000034 lw      x5 x30 0x000          lw     t0, 0(t5)            # loop: t0 = array[t5]
+0x0000000000000038 beq     x5 x0 0x00a           beq    t0, x0, DONE         # if (t0 == 0) done
+0x000000000000003c add     x8 x8 x5              add    s0, s0, t0           
+0x0000000000000040 or      x10 x10 x5            or     a0, a0, t0           
